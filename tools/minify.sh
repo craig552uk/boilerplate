@@ -24,7 +24,7 @@ MINJS="scripts.min.js"
 echo -n "" > "$CSS/$MINCSS"
 echo -n "" > "$JS/$MINJS"
 
-ls $CSS | grep -v $MINCSS > $FILELIST
+ls -I X-* $CSS | grep -v $MINCSS > $FILELIST
 while read LINE
 do
     OLD="$CSS/$LINE"
@@ -34,7 +34,7 @@ do
     
 done < $FILELIST
 
-ls $JS | grep -v $MINJS > $FILELIST
+ls -I X-* $JS | grep -v $MINJS > $FILELIST
 while read LINE
 do
     OLD="$JS/$LINE"
