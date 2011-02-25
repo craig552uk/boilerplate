@@ -40,7 +40,7 @@ do
     OLD="$JS/$LINE"
     
     echo "$OLD -> $JS/$MINJS"
-    java -jar $DN/yuicompressor-2.4.2.jar $OLD > "$JS/$MINJS"
+    java -jar $DN/yuicompressor-2.4.2.jar $OLD >> "$JS/$MINJS"
     
 done < $FILELIST
 
