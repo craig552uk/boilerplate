@@ -14,31 +14,33 @@
 CSS="css"
 JS="js"
 FILELIST="minify.$$.tmp"
+DN=`dirname $0`
 
-COMPORESSOR="yuicompressor-2.4.2.jar"
+COMPORESSOR="$DN/yuicompressor-2.4.2.jar"
 
-MINCSS="css/styles.min.css"
+MINCSS="styles.min.css"
+MINJS="scripts.min.js"
 
-echo -n "" > $MINCSS
+echo -n "" > "$CSS/$MINCSS"
+echo -n "" > "$JS/$MINJS"
 
-ls $CSS | grep -v min > $FILELIST
+ls $CSS | grep -v $MINCSS > $FILELIST
 while read LINE
 do
     OLD="$CSS/$LINE"
     
-    echo "$OLD -> $MINCSS"
-    java -jar yuicompressor-2.4.2.jar $OLD |sed 's/and/and /g' >> $MINCSS
+    echo "$OLD -> $CSS/$MINCSS"
+    java -jar $DN/yuicompressor-2.4.2.jar $OLD |sed 's/and/and /g' >> "$CSS/$MINCSS"
     
 done < $FILELIST
 
-ls $JS | grep -v min > $FILELIST
+ls $JS | grep -v $MINJS > $FILELIST
 while read LINE
 do
     OLD="$JS/$LINE"
-    NEW=` echo "$JS/$LINE" | sed 's/.js/.min.js/g'`
     
-    echo "$OLD -> $NEW"
-    java -jar yuicompressor-2.4.2.jar $OLD > $NEW
+    echo "$OLD -> $JS/$MINJS"
+    java -jar $DN/yuicompressor-2.4.2.jar $OLD > "$JS/$MINJS"
     
 done < $FILELIST
 
