@@ -1,0 +1,87 @@
+/* Styles applied to fix browsers lacking certian features ------------------ */
+/* 
+    Classes set by Modernizer
+    http://www.modernizr.com/docs/
+*/
+
+.no-fontface {}
+
+.no-canvas {}
+
+.no-canvastext {}
+
+.no-webgl {}
+
+.no-audio {}
+
+.no-video {}
+
+.no-rgbs {}
+
+.no-hsla {}
+
+.no-borderimage {}
+
+.no-borderradius {}
+
+.no-boxshadow {}
+
+.no-textshadow {}
+
+.no-multiplebgs {}
+
+.no-backgroundsize {}
+
+.no-opacity {}
+
+.no-cssanimations {}
+
+.no-csscolumns {}
+
+.no-cssgradients {}
+
+.no-cssreflections {}
+
+.no-csstransforms {}
+
+.no-csstransforms3d {}
+
+.no-flexbox {}
+
+.no-csstransitions {}
+
+.no-geolocation {}
+
+.no-localstorage {}
+
+.no-sessionstorage {}
+
+.no-webworkers {}
+
+.no-applicationcache {}
+
+.no-svg {}
+
+.no-inlinesvg {}
+
+.no-svgclippaths {}
+
+.no-smil {}
+
+.no-websqldatabase {}
+
+.no-indexeddb {}
+
+.no-websockets {}
+
+.no-hashchange {}
+
+.no-history {}
+
+.no-draganddrop {}
+
+.no-postmessage {}
+
+.no-touch {}
+
+
