@@ -5,6 +5,15 @@ My own boilerplate for HTML5 CSS3 jQuery projects.
 Pulled and restructured from HTML5 Boilerplate <http://html5boilerplate.com>
 
 
+How To Use The Minifier
+--------------------------------------------------------------------------------
+The script `tools/minify.sh` will concatenate files in the `css/` and `js/` folders in to
+two single minified files (`css/styles.min.css` and `js/scripts.min.js`).
+
+To exclude files from the script, rename with `X-` at the start.
+
+Files are concatenated in name order. Rename files to re-order.
+
 Including Source From...
 --------------------------------------------------------------------------------
 HTML5 BoilerPlate
